@@ -9,7 +9,7 @@ const Navigation = () => {
         </div>
         <nav className="navbar-center">
           <ul>
-            <li><a href="#">GenAI Function Finder</a></li>
+            <li><a href="#">GenAI Supplier Finder</a></li>
             
           </ul>
         </nav>

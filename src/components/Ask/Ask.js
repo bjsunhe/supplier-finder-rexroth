@@ -17,7 +17,7 @@ const Ask = () => {
       console.log(previousQuestions)
 
     const process = await fetch(
-      "http://34.125.249.167:8888/api/ai/openai-api",
+      "http://34.125.249.167:8888/api/ai/rexroth-api",
       {
         method: "POST",
         headers: {
