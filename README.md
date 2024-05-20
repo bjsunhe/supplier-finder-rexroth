@@ -9,29 +9,31 @@ sudo cp -r ./build/* /var/www/palletizer
 
 
 ## first
+
+git clone 
 sudo apt update
 sudo apt install nginx
 
 
-sudo mkdir -p /var/www/palletizer
+sudo mkdir -p /var/www/rexroth
 
-sudo cp -r ./build/* /var/www/palletizer
-
-
-sudo chown -R $USER:$USER /var/www/palletizer
-
-sudo chmod -R 755 /var/www/palletizer
+sudo cp -r ./build/* /var/www/rexroth
 
 
+sudo chown -R $USER:$USER /var/www/rexroth
 
-sudo nano /etc/nginx/sites-available/palletizer
+sudo chmod -R 755 /var/www/rexroth
+
+
+
+sudo nano /etc/nginx/sites-available/rexroth
 
 
 server {
-        listen 8899;
-        listen [::]:8899;
+        listen 8877;
+        listen [::]:8877;
 
-        root /var/www/palletizer;
+        root /var/www/rexroth;
         index index.html index.htm index.nginx-debian.html;
 
         server_name your_domain.com www.your_domain;
@@ -41,6 +43,6 @@ server {
         }
 }
 
-sudo ln -s /etc/nginx/sites-available/palletizer /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/rexroth /etc/nginx/sites-enabled/
 
 sudo systemctl restart nginx
