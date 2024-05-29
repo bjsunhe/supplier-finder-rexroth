@@ -56,7 +56,7 @@ const Ask = () => {
         
       ]);
   
-      if(containsHttp(data.result[0][Object.keys(data.result[0])[0]])){
+      if(data.result[0]&&containsHttp(data.result[0][Object.keys(data.result[0])[0]])){
         window.open(data.result[0][Object.keys(data.result[0])[0]], '_blank', 'noopener,noreferrer');
       }
     });
